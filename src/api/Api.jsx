@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import StocksList from '../StocksList'; // Dosya yolunu doğru belirleyin
+import StocksList from '../StocksList'; 
 
 function Api() {
-    const [bistData, setBistData] = useState(null); // Başlangıçta null
+    const [bistData, setBistData] = useState(null); 
     const [loading, setLoading] = useState(false);
     const [butonClicked , setButonClicked]=useState(false)
 
@@ -20,7 +20,7 @@ function Api() {
             setBistData(response.data);
             console.log(bistData)
         } catch (err) {
-            console.error('Hata oluştu', err); // Daha iyi hata raporlaması
+            console.error('Hata oluştu', err); 
         } finally {
             setLoading(false);
         }
